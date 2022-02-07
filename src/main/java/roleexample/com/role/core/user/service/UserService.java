@@ -2,7 +2,7 @@ package roleexample.com.role.core.user.service;
 
 import roleexample.com.role.core.exceptions.InvalidTokenException;
 import roleexample.com.role.core.exceptions.UserAlreadyExistException;
-import roleexample.com.role.core.user.jpa.UserEntity;
+import roleexample.com.role.core.user.jpa.data.UserEntity;
 import roleexample.com.role.web.data.user.UserData;
 import roleexample.com.role.core.exceptions.UnknownIdentifierException;
 

@@ -1,4 +1,4 @@
-package roleexample.com.role.core.user.jpa;
+package roleexample.com.role.core.user.jpa.data;
 
 
 import javax.persistence.*;

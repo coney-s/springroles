@@ -1,12 +1,14 @@
 package roleexample.com.role.models;
 
 
+import roleexample.com.role.core.user.jpa.data.UserEntity;
+
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
     @Table(name = "principle_groups")
-    public class Group extends AbstractEntity {
+    public class Group {
 
         //removed getter and setter to save space
 
@@ -16,7 +18,7 @@ import java.util.Set;
         private String name;
 
         @ManyToMany(mappedBy = "userGroups")
-        private Set<User> users;
+        private Set<UserEntity> users;
 
         public Group(String code, String name){
             this.code = code;
@@ -36,21 +38,21 @@ import java.util.Set;
         this.code = code;
     }
 
-    @Override
+
     public String getName() {
         return name;
     }
 
-    @Override
+
     public void setName(String name) {
         this.name = name;
     }
 
-    public Set<User> getUsers() {
+    public Set<UserEntity> getUsers() {
         return users;
     }
 
-    public void setUsers(Set<User> users) {
+    public void setUsers(Set<UserEntity> users) {
         this.users = users;
     }
 }

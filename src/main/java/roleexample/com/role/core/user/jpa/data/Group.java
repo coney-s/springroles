@@ -1,4 +1,4 @@
-package roleexample.com.role.core.user.jpa;
+package roleexample.com.role.core.user.jpa.data;
 
 import javax.persistence.*;
 import java.util.Objects;
@@ -7,7 +7,7 @@ import java.util.Set;
 
 @Entity
     @Table(name = "principle_groups")
-    public class Group extends AbstractEntity {
+    public class Group {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,7 +35,7 @@ import java.util.Set;
             this.name = name;
         }
 
-    @Override
+
     public Long getId() {
         return id;
     }
